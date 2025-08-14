@@ -17,19 +17,19 @@ jobs:
     - name: Log in to Docker hub
       uses: docker/login-action@v2
       with:
-        username: swischyasunthonphusit
+        username: swischya
         password: ${{ secret.DOCKER_HUB_TOKEN }}
 
     - name: Build and tag Docker images
-      run : |
+      run: |
         docker compose -f docker-compose.yml build
 
     - name: Tag & Push Backend image
-      run : |
+      run: |
         docker tag todo101-todo-backend swischya/todo-backend:latest
         docker push swischya/todo-backend:latest
 
     - name: Tag & Push Frontend image
-      run : |
+      run: |
         docker tag todo101-todo-frontend swischya/todo-frontend:latest
         docker push swischya/todo-frontend:latest
