@@ -18,18 +18,18 @@ jobs:
       users: docker/login-action@v2
       with:
         username: swischyasunthonphusit
-        password: ${{secret.DOCKER_HUB_TOKEN}}
+        password: ${{ secret.DOCKER_HUB_TOKEN }}
 
     - name: Build and tag Docker images
-      run :
+      run : |
         docker compose -f docker-compose.yml build
 
     - name: Tag & Push Backend image
-      run :
-        docker tag todo101-todo-backend swischyasunthonphusit/todo-backend:latest
+      run : |
+        docker tag todo101-todo-backend swischya/todo-backend:latest
         docker push swischyasunthonphusit/todo-backend:latest
 
     - name: Tag & Push Frontend image
-      run :
-        docker tag todo101-todo-frontend swischyasunthonphusit/todo-frontend:latest
+      run : |
+        docker tag todo101-todo-frontend swischya/todo-frontend:latest
         docker push swischyasunthonphusit/todo-frontend:latest
