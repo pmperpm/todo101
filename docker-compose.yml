@@ -6,7 +6,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - /Users/swischyasunthonphusit/todo101:/data/db
+      - /Users/swischyasunthonphusit/todo101/temptodo101:/data/db
   
   todo-backend: 
     build: ./backend
