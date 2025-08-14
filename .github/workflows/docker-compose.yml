@@ -27,9 +27,9 @@ jobs:
     - name: Tag & Push Backend image
       run : |
         docker tag todo101-todo-backend swischya/todo-backend:latest
-        docker push swischyasunthonphusit/todo-backend:latest
+        docker push swischya/todo-backend:latest
 
     - name: Tag & Push Frontend image
       run : |
         docker tag todo101-todo-frontend swischya/todo-frontend:latest
-        docker push swischyasunthonphusit/todo-frontend:latest
+        docker push swischya/todo-frontend:latest
