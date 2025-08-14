@@ -12,10 +12,10 @@ jobs:
 
     steps:
     - name: Checkout repository
-      users: actions/checkout@v3
+      uses: actions/checkout@v3
 
     - name: Log in to Docker hub
-      users: docker/login-action@v2
+      uses: docker/login-action@v2
       with:
         username: swischyasunthonphusit
         password: ${{ secret.DOCKER_HUB_TOKEN }}
