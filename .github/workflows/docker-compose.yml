@@ -33,4 +33,3 @@ jobs:
       run :
         docker tag todo101-todo-frontend swischyasunthonphusit/todo-frontend:latest
         docker push swischyasunthonphusit/todo-frontend:latest
-        
