@@ -18,7 +18,7 @@ jobs:
       users: docker/login-action@v2
       with:
         username: swischyasunthonphusit
-        password: ${DOCKER_TOKEN}
+        password: ${{secret.DOCKER_HUB_TOKEN}}
 
     - name: Build and tag Docker images
       run :
